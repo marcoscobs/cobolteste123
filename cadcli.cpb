@@ -1,0 +1,317 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 85.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 92.
+
+       01 DATA-BLOCK.
+          03 LV-LISTA OBJECT REFERENCE.
+          03 RETORNO-LIST-VIEW-D             PIC X(600).
+      *
+          03 EXIT-FLAG                       PIC 9.
+             88 EXIT-FLAG-TRUE               VALUE 1.
+          03 CONFIG-FLAG                     PIC x(4) COMP-5.
+          03 CONFIG-VALUE                    PIC x(4) COMP-5.
+          03 DSDIR-PARAMS.
+             05 DSDIR-FUNCTION               PIC X(4).
+             05 DSDIR-RETURN-CODE            PIC x(2) COMP-X.
+             05 DSDIR-FILENAME               PIC X(256).
+          03 DSDIR-PARAMS2.
+             05 DSDIR-TITLE                  PIC X(256).
+      *Variaves de interface
+      *
+      *
+      * Variaveis de controle
+          03 OPERACAO                        PIC X(30).
+          03 LINHALISTA-TAB                  PIC X(150).
+          03 LINHALISTA                      PIC X(150).
+          03 LINHALISTA-META                 PIC X(150).
+          03 ALTE                            PIC 9.
+             88 ALTE-TRUE                    VALUE 1.
+          03 PESQ                            PIC X(139).
+          03 CAMPO-ERRO                      PIC X(76).
+          03 PESQSENSITIVE                   PIC 9.
+             88 PESQSENSITIVE-TRUE           VALUE 1.
+          03 MOVIMENTO                       PIC X.
+      *
+      *
+      *Dados da Tabela.
+          03 NO-TAB-D                        PIC X(2).
+          03 COD-TAB-D                       PIC X(4).
+          03 DESC-TAB-D                      PIC X(40).
+      *
+          03 COD-EMP-D                       PIC X(3).
+          03 SIGLA-EMP-D                     PIC X(20).
+          03 NOME-EMP-D                      PIC X(30).
+      * REG-VEND
+          03 ENDE-VEND-D                     PIC X(30).
+          03 BAIRRO-VEND-D                   PIC X(15).
+          03 DOC-VEND-D                      PIC X(14).
+          03 CIDADE-VEND-D                   PIC X(20).
+          03 UF-VEND-D                       PIC X(2).
+          03 DT-ACERTO-VEND-D                PIC 9(8).
+          03 DDD-VEND-D                      PIC X(4).
+          03 FONE-VEND-D                     PIC X(10).
+          03 COD-CONTAB-V-V-VEND-D           PIC X(11).
+          03 COD-CONTAB-V-P-VEND-D           PIC X(11).
+          03 COD-CONTAB-REC-DUP-VEND-D       PIC X(11).
+          03 CLASSE-VEND-D                   PIC X(2).
+          03 SENHA-VEND-D                    PIC X(10).
+          03 PERC-VEND-D                     PIC 9(2)V9(2).
+          03 COD-MAPA-VEND-D                 PIC X(3).
+          03 ACRES-VEND-D                    PIC 9(2)V9(2).
+          03 INT-EXT-VEND-D                  PIC X.
+          03 PERC-PRAZO-VEND-D               PIC 9(2)V9(2).
+          03 INTERNO-EXTERNO-D               PIC X(20).
+          03 ERRO-LER-D                      PIC X(3).
+          03 MENSAGEM-DOC-D                  PIC X(40).
+      *
+      *hint
+          03 FUNCTION-DATA-D.
+             05 WINDOW-HANDLE-D              PIC x(4) COMP-5.
+             05 OBJECT-REFERENCE-D OBJECT REFERENCE.
+             05 IO-TEXT-BUFFER-D             PIC X(256).
+          03 TOOLTIP-REF-D OBJECT REFERENCE.
+          03 CHARACTER-ARRAY-D OBJECT REFERENCE.
+      *
+          03 COR-FRENTE-D                    PIC X(20).
+          03 COR-FUNDO-D                     PIC X(20).
+      *
+          03 PERC-VENDA-1-PALM-VEND-D        PIC 9(2)V9(3).
+          03 PERC-VENDA-2-PALM-VEND-D        PIC 9(2)V9(3).
+          03 PERC-VENDA-3-PALM-VEND-D        PIC 9(2)V9(3).
+          03 PRECO-VENDA-PALM-VEND-D         PIC 9.
+             88 PRECO-VENDA-PALM-VEND-D-TRUE VALUE 1.
+      *
+          03 DIAS-VENDA-1-PALM-VEND-D        PIC 9(2).
+          03 DIAS-VENDA-2-PALM-VEND-D        PIC 9(2).
+          03 DIAS-VENDA-3-PALM-VEND-D        PIC 9(2).
+      *
+          03 COD-TRANS-D                     PIC 9(3).
+          03 INATIVO-VEND-D                  PIC 9.
+             88 INATIVO-VEND-D-TRUE          VALUE 1.
+          03 COD-VEND-META-D                 PIC X(3).
+          03 DT-INI-META-D                   PIC 9(8).
+          03 DT-FIM-META-D                   PIC 9(8).
+          03 VALOR-META-D                    PIC 9(11)V9(2).
+      *
+          03 ESPECIAL-COMISS-D               PIC 9.
+             88 ESPECIAL-COMISS-D-TRUE       VALUE 1.
+          03 PERC-META-D                     PIC 9(2)V9(2).
+          03 OBSERVACAO-D                    PIC X(50).
+          03 IMPEDIR-FUT-ENT-D               PIC 9.
+             88 IMPEDIR-FUT-ENT-D-TRUE       VALUE 1.
+          03 VR-MIN-VEND-D                   PIC 9(6)V9(2).
+          03 REGIAO-VEND-D                   PIC X(2).
+          03 NOME-REG-D                      PIC X(10).
+          03 COD-FUNC-D                      PIC 9(5).
+          03 NOME-FUNC-D                     PIC X(40).
+          03 META-MERCU-VEND-D               PIC 9(6)V9(2).
+          03 COD-CLI-D                       PIC 9(7).
+          03 RAZAO-CLI-D                     PIC X(40).
+          03 CNPJ-CLI-D                      PIC 9(14).
+          03 LAT-CLI-D                       PIC S9(3)V9(9).
+          03 LONG-CLI-D                      PIC S9(3)V9(9).
+          03 CAMINHO-CSV-D                   PIC X(200).
+          03 SOMENTE-NF-D                    PIC 9.
+             88 SOMENTE-NF-D-TRUE            VALUE 1.
+          03 WIN-HANDLE-D                    PIC x(4) COMP-X.
+          03 IGNORA-CAB-D                    PIC 9.
+             88 IGNORA-CAB-D-TRUE            VALUE 1.
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 FIELD-NUMBERS.
+          03 FLD-NO-LV-LISTA                 PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 FLD-NO-RETORNO-LIST-VIEW-D      PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 FLD-NO-EXIT-FLAG                PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 FLD-NO-CONFIG-FLAG              PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 FLD-NO-CONFIG-VALUE             PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 FLD-NO-DSDIR-FUNCTION           PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 FLD-NO-DSDIR-RETURN-CODE        PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 FLD-NO-DSDIR-FILENAME           PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 FLD-NO-DSDIR-TITLE              PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 FLD-NO-OPERACAO                 PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 FLD-NO-LINHALISTA-TAB           PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 FLD-NO-LINHALISTA               PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 FLD-NO-LINHALISTA-META          PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 FLD-NO-ALTE                     PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 FLD-NO-PESQ                     PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 FLD-NO-CAMPO-ERRO               PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 FLD-NO-PESQSENSITIVE            PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 FLD-NO-MOVIMENTO                PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 FLD-NO-NO-TAB-D                 PIC 9(4) COMP-5 VALUE
+                                               21.
+          03 FLD-NO-COD-TAB-D                PIC 9(4) COMP-5 VALUE
+                                               22.
+          03 FLD-NO-DESC-TAB-D               PIC 9(4) COMP-5 VALUE
+                                               23.
+          03 FLD-NO-COD-EMP-D                PIC 9(4) COMP-5 VALUE
+                                               24.
+          03 FLD-NO-SIGLA-EMP-D              PIC 9(4) COMP-5 VALUE
+                                               25.
+          03 FLD-NO-NOME-EMP-D               PIC 9(4) COMP-5 VALUE
+                                               26.
+          03 FLD-NO-ENDE-VEND-D              PIC 9(4) COMP-5 VALUE
+                                               27.
+          03 FLD-NO-BAIRRO-VEND-D            PIC 9(4) COMP-5 VALUE
+                                               28.
+          03 FLD-NO-DOC-VEND-D               PIC 9(4) COMP-5 VALUE
+                                               29.
+          03 FLD-NO-CIDADE-VEND-D            PIC 9(4) COMP-5 VALUE
+                                               30.
+          03 FLD-NO-UF-VEND-D                PIC 9(4) COMP-5 VALUE
+                                               31.
+          03 FLD-NO-DT-ACERTO-VEND-D         PIC 9(4) COMP-5 VALUE
+                                               32.
+          03 FLD-NO-DDD-VEND-D               PIC 9(4) COMP-5 VALUE
+                                               33.
+          03 FLD-NO-FONE-VEND-D              PIC 9(4) COMP-5 VALUE
+                                               34.
+          03 FLD-NO-COD-CONTAB-V-V-VEND-D    PIC 9(4) COMP-5 VALUE
+                                               35.
+          03 FLD-NO-COD-CONTAB-V-P-VEND-D    PIC 9(4) COMP-5 VALUE
+                                               36.
+          03 FLD-NO-COD-CONTAB-REC-DUP-VEND  PIC 9(4) COMP-5 VALUE
+                                               37.
+      * Field COD-CONTAB-REC-DUP-VEND-D has been truncated
+          03 FLD-NO-CLASSE-VEND-D            PIC 9(4) COMP-5 VALUE
+                                               38.
+          03 FLD-NO-SENHA-VEND-D             PIC 9(4) COMP-5 VALUE
+                                               39.
+          03 FLD-NO-PERC-VEND-D              PIC 9(4) COMP-5 VALUE
+                                               40.
+          03 FLD-NO-COD-MAPA-VEND-D          PIC 9(4) COMP-5 VALUE
+                                               41.
+          03 FLD-NO-ACRES-VEND-D             PIC 9(4) COMP-5 VALUE
+                                               42.
+          03 FLD-NO-INT-EXT-VEND-D           PIC 9(4) COMP-5 VALUE
+                                               43.
+          03 FLD-NO-PERC-PRAZO-VEND-D        PIC 9(4) COMP-5 VALUE
+                                               44.
+          03 FLD-NO-INTERNO-EXTERNO-D        PIC 9(4) COMP-5 VALUE
+                                               45.
+          03 FLD-NO-ERRO-LER-D               PIC 9(4) COMP-5 VALUE
+                                               46.
+          03 FLD-NO-MENSAGEM-DOC-D           PIC 9(4) COMP-5 VALUE
+                                               47.
+          03 FLD-NO-WINDOW-HANDLE-D          PIC 9(4) COMP-5 VALUE
+                                               49.
+          03 FLD-NO-OBJECT-REFERENCE-D       PIC 9(4) COMP-5 VALUE
+                                               50.
+          03 FLD-NO-IO-TEXT-BUFFER-D         PIC 9(4) COMP-5 VALUE
+                                               51.
+          03 FLD-NO-TOOLTIP-REF-D            PIC 9(4) COMP-5 VALUE
+                                               52.
+          03 FLD-NO-CHARACTER-ARRAY-D        PIC 9(4) COMP-5 VALUE
+                                               53.
+          03 FLD-NO-COR-FRENTE-D             PIC 9(4) COMP-5 VALUE
+                                               54.
+          03 FLD-NO-COR-FUNDO-D              PIC 9(4) COMP-5 VALUE
+                                               55.
+          03 FLD-NO-PERC-VENDA-1-PALM-VEND   PIC 9(4) COMP-5 VALUE
+                                               56.
+      * Field PERC-VENDA-1-PALM-VEND-D has been truncated
+          03 FLD-NO-PERC-VENDA-2-PALM-VEND   PIC 9(4) COMP-5 VALUE
+                                               57.
+      * Field PERC-VENDA-2-PALM-VEND-D has been truncated
+          03 FLD-NO-PERC-VENDA-3-PALM-VEND   PIC 9(4) COMP-5 VALUE
+                                               58.
+      * Field PERC-VENDA-3-PALM-VEND-D has been truncated
+          03 FLD-NO-PRECO-VENDA-PALM-VEND-D  PIC 9(4) COMP-5 VALUE
+                                               59.
+          03 FLD-NO-DIAS-VENDA-1-PALM-VEND   PIC 9(4) COMP-5 VALUE
+                                               60.
+      * Field DIAS-VENDA-1-PALM-VEND-D has been truncated
+          03 FLD-NO-DIAS-VENDA-2-PALM-VEND   PIC 9(4) COMP-5 VALUE
+                                               61.
+      * Field DIAS-VENDA-2-PALM-VEND-D has been truncated
+          03 FLD-NO-DIAS-VENDA-3-PALM-VEND   PIC 9(4) COMP-5 VALUE
+                                               62.
+      * Field DIAS-VENDA-3-PALM-VEND-D has been truncated
+          03 FLD-NO-COD-TRANS-D              PIC 9(4) COMP-5 VALUE
+                                               63.
+          03 FLD-NO-INATIVO-VEND-D           PIC 9(4) COMP-5 VALUE
+                                               64.
+          03 FLD-NO-COD-VEND-META-D          PIC 9(4) COMP-5 VALUE
+                                               65.
+          03 FLD-NO-DT-INI-META-D            PIC 9(4) COMP-5 VALUE
+                                               66.
+          03 FLD-NO-DT-FIM-META-D            PIC 9(4) COMP-5 VALUE
+                                               67.
+          03 FLD-NO-VALOR-META-D             PIC 9(4) COMP-5 VALUE
+                                               68.
+          03 FLD-NO-ESPECIAL-COMISS-D        PIC 9(4) COMP-5 VALUE
+                                               69.
+          03 FLD-NO-PERC-META-D              PIC 9(4) COMP-5 VALUE
+                                               70.
+          03 FLD-NO-OBSERVACAO-D             PIC 9(4) COMP-5 VALUE
+                                               71.
+          03 FLD-NO-IMPEDIR-FUT-ENT-D        PIC 9(4) COMP-5 VALUE
+                                               72.
+          03 FLD-NO-VR-MIN-VEND-D            PIC 9(4) COMP-5 VALUE
+                                               73.
+          03 FLD-NO-REGIAO-VEND-D            PIC 9(4) COMP-5 VALUE
+                                               74.
+          03 FLD-NO-NOME-REG-D               PIC 9(4) COMP-5 VALUE
+                                               75.
+          03 FLD-NO-COD-FUNC-D               PIC 9(4) COMP-5 VALUE
+                                               76.
+          03 FLD-NO-NOME-FUNC-D              PIC 9(4) COMP-5 VALUE
+                                               77.
+          03 FLD-NO-META-MERCU-VEND-D        PIC 9(4) COMP-5 VALUE
+                                               78.
+          03 FLD-NO-COD-CLI-D                PIC 9(4) COMP-5 VALUE
+                                               79.
+          03 FLD-NO-RAZAO-CLI-D              PIC 9(4) COMP-5 VALUE
+                                               80.
+          03 FLD-NO-CNPJ-CLI-D               PIC 9(4) COMP-5 VALUE
+                                               81.
+          03 FLD-NO-LAT-CLI-D                PIC 9(4) COMP-5 VALUE
+                                               82.
+          03 FLD-NO-LONG-CLI-D               PIC 9(4) COMP-5 VALUE
+                                               83.
+          03 FLD-NO-CAMINHO-CSV-D            PIC 9(4) COMP-5 VALUE
+                                               84.
+          03 FLD-NO-SOMENTE-NF-D             PIC 9(4) COMP-5 VALUE
+                                               85.
+          03 FLD-NO-WIN-HANDLE-D             PIC 9(4) COMP-5 VALUE
+                                               86.
+          03 FLD-NO-IGNORA-CAB-D             PIC 9(4) COMP-5 VALUE
+                                               87.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

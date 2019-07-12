@@ -1,0 +1,39 @@
+
+NetExpress Exception Handler - 12/07/2019  16:26:33
+
+C:\Users\Welder\Documents\hbsis\RELEASE\HBSIS.exe caused an exception at address : 0x0041E731
+Exception type - EXCEPTION_ACCESS_VIOLATION on Write. Address 0x0136ADF8
+
+Registers:
+
+	EAX 30303030	EBX 625F2880
+	ECX 00000032	EDX 006A93F0
+	DS  0023	ESI 006ABF9B
+	ES  0023	EDI 0136ADF8
+	FS  003B	GS  0000
+	CS  001B	EIP 0041E731
+	SS  0023	ESP 0012FDD4	EBP 006A94E8
+	Flags 00210217
+
+Error occurred in : C:\Users\Welder\Documents\hbsis\RELEASE\HBSIS.exe, loaded at 0x00400000
+
+COBOL call stack:
+
+	CADCLI	(obj program)
+	HBSIS	(obj program)
+
+Run-time : C:\Users\Welder\Documents\hbsis\RELEASE\cblrtss.dll, loaded at 0x600F0000
+
+	CompanyName MERANT International Limited
+	FileDescription Micro Focus 32-bit RTS
+	FileVersion 3.714, 3.491
+	LegalCopyright Copyright (C) 1984-2000 MERANT International Limited
+	OriginalFileName cblrtss.dll
+	ProductName Micro Focus Net Express
+	ProductVersion 3.1.11
+
+OS Information:
+
+Windows NT 6.1 (Build 7601: Service Pack 1)
+CPU: Intel Pentium Model 23 step 6, 2 processors
+Available memory - 2097151 KB

@@ -1,0 +1,199 @@
+
+        01 VAL1            PIC X(13).
+        01 FILLER REDEFINES VAL1.           
+            02 VAL1-DIG    PIC X OCCURS 13 TIMES.
+        01 FILLER REDEFINES VAL1.
+            02 CAMPO-13-AUX  PIC X(13).
+        01 FILLER REDEFINES VAL1.
+            02 CAMPO-12-AUX  PIC X(12).
+            02 FILLER        PIC X.
+        01 FILLER REDEFINES VAL1.
+            02 CAMPO-11-AUX  PIC X(11).
+            02 FILLER        PIC XX.
+         01 FILLER REDEFINES VAL1.
+            02 CAMPO-10-AUX  PIC X(10).
+            02 FILLER        PIC X(03).
+         01 FILLER REDEFINES VAL1.
+            02 CAMPO-9-AUX   PIC X(09).
+            02 FILLER        PIC X(04). 
+         01 FILLER REDEFINES VAL1.
+            02 CAMPO-8-AUX   PIC X(08).
+            02 FILLER        PIC X(05).
+        01 FILLER REDEFINES VAL1.
+            02 CAMPO-7-AUX   PIC X(07).
+            02 FILLER        PIC X(06).
+        01 FILLER REDEFINES VAL1.
+            02 CAMPO-6-AUX   PIC X(06).
+            02 FILLER        PIC X(07).
+        01 FILLER REDEFINES VAL1.
+            02 CAMPO-5-AUX   PIC X(05).
+            02 FILLER        PIC X(08).
+        01 FILLER REDEFINES VAL1.
+            02 CAMPO-4-AUX   PIC X(04).
+            02 FILLER        PIC X(09).
+        01 FILLER REDEFINES VAL1.
+            02 CAMPO-3-AUX   PIC X(03).
+            02 FILLER        PIC X(10).
+        01 FILLER REDEFINES VAL1.
+            02 CAMPO-2-AUX   PIC XX.
+            02 FILLER        PIC X(11).
+     
+        01 VAL2            PIC X(13).
+        01 FILLER REDEFINES VAL2.
+            02 VAL2-DIG    PIC X OCCURS 13 TIMES.
+        01 FILLER REDEFINES VAL2.
+            02 VAL2-DIG-9    PIC 9 OCCURS 13 TIMES.
+        01 FILLER REDEFINES VAL2.
+            02 VAL2-9      PIC 9(13).   
+        01 FILLER REDEFINES VAL2.
+            02 VALOR-13    PIC 9(10)V999.
+        01 FILLER REDEFINES VAL2.
+            02 FILLER      PIC X.
+            02 VALOR-12    PIC 9(10)V99.
+        01 FILLER REDEFINES VAL2.
+            02 FILLER      PIC XX.
+            02 VALOR-11    PIC 9(09)V99.
+
+        01 FILLER REDEFINES VAL2.
+            02 FILLER      PIC X(10).
+            02 VALOR-3     PIC 9V99.
+        01 FILLER REDEFINES VAL2.
+            02 FILLER      PIC X(11).
+            02 CAMPO-2     PIC 99.
+        01 FILLER REDEFINES VAL2.
+            02 FILLER      PIC X(10).
+            02 CAMPO-3     PIC 9(03).
+        01 FILLER REDEFINES VAL2.
+            02 FILLER      PIC X(09).
+            02 VALOR-4     PIC 99V99.
+        01 FILLER REDEFINES VAL2.  
+            02 FILLER      PIC X(09).  
+            02 CAMPO-4     PIC 9(04).  
+        01 FILLER REDEFINES VAL2.
+            02 FILLER     PIC X(08).
+            02 VALOR-5    PIC 9(03)V99.
+        01 FILLER REDEFINES VAL2.
+           02 FILLER      PIC X(08).
+           02 CAMPO-5     PIC 9(05).
+        01 FILLER REDEFINES VAL2.
+            02 FILLER      PIC X(07).
+            02 CAMPO-6     PIC 9(06).
+        01 FILLER REDEFINES VAL2.
+            02 FILLER      PIC X(06).
+            02 CAMPO-7     PIC 9(07). 
+        01 FILLER REDEFINES VAL2.   
+            02 FILLER      PIC X(05).    
+            02 CAMPO-8     PIC 9(08).    
+        01 FILLER REDEFINES VAL2.   
+            02 FILLER      PIC X(04).    
+            02 CAMPO-9     PIC 9(09).    
+        01 FILLER REDEFINES VAL2.   
+            02 FILLER      PIC X(07).  
+            02 VALOR-6     PIC 9(04)V99.
+        01 FILLER REDEFINES VAL2.
+            02 FILLER      PIC X(06).
+            02 VALOR-7     PIC 9(05)V99.
+        01 FILLER REDEFINES VAL2.
+            02 FILLER      PIC X(03).
+            02 CAMPO-10    PIC 9(10).
+        01 FILLER REDEFINES VAL2.
+            02 FILLER      PIC X.
+            02 CAMPO-12    PIC 9(12).
+        01 FILLER REDEFINES VAL2.
+            02 FILLER      PIC XX.
+            02 CAMPO-11    PIC 9(11).
+
+        01 FILLER REDEFINES VAL2.
+            02 CAMPO-13    PIC 9(13).
+
+        77 TAM-INV         PIC 99         VALUE ZEROS.  
+        77 IND-AREA        PIC 99         VALUE ZEROS.
+        77 DIAS-PAR        PIC 9(05)      VALUE ZEROS.
+        77 DIAS-COR        PIC 9(05)      VALUE ZEROS.
+        77 DIAS-ATR        PIC 9(05)      VALUE ZEROS COMP-3.  
+        77 DIAS-VENC       PIC 9(05)      VALUE ZEROS COMP-3.
+        77 DIAS-VENCTO     PIC 9(05)      VALUE ZEROS COMP-3.
+        77 DIAS-VENCTO-PED PIC 9(05)      VALUE ZEROS COMP-3.
+        77 DIAS-MESES      PIC 9(03)      VALUE ZEROS COMP-3.  
+        77 IND-MES         PIC 99         VALUE ZEROS.  
+        77 NAO-PASSA       PIC 9          VALUE 0.
+        77 RESUL           PIC 999        VALUE 0.  
+        77 INDICE          PIC 99         VALUE 0.    
+        77 K               PIC 9(05)      VALUE 0.
+        77 Y               PIC 9(05)      VALUE 0.
+        77 INDICA          PIC 99         VALUE 0.
+        77 DIGITO          PIC 9          VALUE 0.    
+        77 W-LEN           PIC 9(05)      VALUE 0.
+      *  01 WS-OUTROS-3     PIC 999999    VALUE 0.
+      *  01 WS-VR-OUTROS REDEFINES WS-OUTROS-3 PIC 999V999.
+
+       01 FILLER PIC 9.
+           88 FLAG-EXIT VALUE 1 FALSE 0.
+
+       01 FILLER PIC 9.
+           88 FLAG-HABILITAR VALUE 1 FALSE 0.
+
+       01 FILLER PIC 9.
+           88 FLAG-HABILITAR-TAB VALUE 1 FALSE 0.
+
+        01 CONTA           PIC X(11).    
+        01 FILLER REDEFINES CONTA.   
+            02 WS-CONTA OCCURS  11 TIMES.    
+                03 CONTA-R   PIC X.  
+        01 FILLER REDEFINES CONTA.  
+            02 WS-CONTA-9 OCCURS 11 TIMES.  
+                    04 CONTA-9   PIC 9.    
+
+	 01 CONTA1.
+	    02 CONTAWS1 PIC X OCCURS 11 TIMES.
+
+        01 QUINZEN            PIC X(17).
+        01 FILLER REDEFINES QUINZEN.
+           02 QUINZE       PIC X OCCURS 17 TIMES.
+
+        01 DATA-AUX        PIC 9(08).
+        01 FILLER REDEFINES DATA-AUX.
+            02 DIA-AUX     PIC 99.
+            02 MES-AUX     PIC 99.
+            02 ANO-AUX     PIC 9999.
+            02 FILLER REDEFINES ANO-AUX.
+               04 FILLER    PIC XX.
+               04 ANO-AUX-2 PIC XX.
+
+        01 RESTO-1         PIC 99V99.
+        01 FILLER REDEFINES RESTO-1.
+            02 FILLER      PIC 99.
+            02 RESTO       PIC 99.
+        01 WS-DATA         PIC 9(08).
+        01 FILLER REDEFINES WS-DATA.
+            02 WS-DIA      PIC 99.
+            02 WS-MES      PIC 99.
+            02 WS-ANO      PIC 9999.
+        01 TABELA-ED       PIC X(24) VALUE "312831303130313130313031".
+        01 FILLER REDEFINES TABELA-ED. 
+            02 MES-TAB PIC 99 OCCURS 12 TIMES.
+
+       01 flag                   pic 9(2) comp-x value 1.
+       01 user-key-control.
+          05 enable-fn-keys      pic 9(2) comp-x value 1.
+          05 filler              pic X           value "1".
+          05 first-user-key      pic 9(2) comp-x value 0.
+          05 number-of-keys      pic 9(2) comp-x value 12.
+
+        01 key-status.
+          05 key-type            pic x.
+          05 key-code-1          pic 9(2) comp-x.
+          05 key-code-2          pic x.  
+
+        01 FS.  
+            02 FS1          PIC X.  
+            02 FS2          PIC X.  
+            02 FS2-BIN REDEFINES FS2 PIC 9(2) COMP-X.
+
+      *    Our name - checked to see if we should be active
+           01 Nome-do-programa  PIC X(8).
+
+      *    Flags specific to this program           
+           01 Programa-Flags   PIC 9(2) COMP-5 VALUE 1.
+              88 New-Instance VALUE 1 FALSE 0.    
+

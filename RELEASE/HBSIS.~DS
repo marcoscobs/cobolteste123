@@ -1,0 +1,155 @@
+<DebugState xmlns="x-schema:dbgsch01.xml" Version="1">
+    <ProgramData Name="C:\USERS\WELDER\DOCUMENTS\HBSIS\RELEASE\CADVEND.idy">
+        <BreakpointSection>
+            <Breakpoint Type="Normal" Section="INICIALIZA-OBJETOS" StmtCount="00001" StmtType="006" Every="00001" Enabled="1"/>
+            <Breakpoint Type="Normal" Section="INICIALIZA-OBJETOS" StmtCount="00001" StmtType="007" Every="00001" Enabled="1"/>
+            <Breakpoint Type="Normal" Section="INICIO" StmtCount="00001" StmtType="014" Every="00001" Enabled="1"/>
+            <Breakpoint Type="Normal" Section="CONTROLE" StmtCount="00001" StmtType="072" Every="00001" Enabled="1"/>
+            <Breakpoint Type="Normal" Section="LISTAR" StmtCount="00001" StmtType="007" Every="00001" Enabled="1"/>
+        </BreakpointSection>
+        <MonitorSection>
+            <Monitor Type="Normal" Name="OPERACAO" ExamineLine="0000001689" ExamineCol="040">
+                <ExamineText>
+                    <![CDATA[          EVALUATE FUNCTION UPPER-CASE(OPERACAO)
+             WHEN "INICIALIZA-OBJETOS"
+]]>
+                </ExamineText>
+            </Monitor>
+            <Monitor Type="Normal" Name="FS" ExamineLine="0000001887" ExamineCol="014">
+                <ExamineText>
+                    <![CDATA[          IF FS EQUAL ZEROS
+]]>
+                </ExamineText>
+            </Monitor>
+        </MonitorSection>
+        <QueryListSection/>
+    </ProgramData>
+    <ProgramData Name="C:\USERS\WELDER\DOCUMENTS\HBSIS\RELEASE\CADVEND.idy">
+        <BreakpointSection/>
+        <MonitorSection>
+            <Monitor Type="Normal" Name="FS" ExamineLine="0000001893" ExamineCol="014">
+                <ExamineText>
+                    <![CDATA[          IF FS EQUAL ZEROS
+]]>
+                </ExamineText>
+            </Monitor>
+        </MonitorSection>
+        <QueryListSection/>
+    </ProgramData>
+    <ProgramData Name="C:\USERS\WELDER\DOCUMENTS\HBSIS\RELEASE\CADVEND.idy">
+        <BreakpointSection>
+            <Breakpoint Type="Normal" Section="GRAVAR" StmtCount="00001" StmtType="073" Every="00001" Enabled="1"/>
+            <Breakpoint Type="Normal" Section="ADICIONAR" StmtCount="00001" StmtType="073" Every="00001" Enabled="1"/>
+            <Breakpoint Type="Normal" Section="LISTAR" StmtCount="00001" StmtType="007" Every="00001" Enabled="1"/>
+            <Breakpoint Type="Normal" Section="PREENCHE-LINHA" StmtCount="00001" StmtType="006" Every="00001" Enabled="1"/>
+        </BreakpointSection>
+        <MonitorSection>
+            <Monitor Type="Normal" Name="LONG-VEND" ExamineLine="0000001946" ExamineCol="016">
+                <ExamineText>
+                    <![CDATA[          MOVE LONG-VEND              TO WS-LONG-EDIT
+]]>
+                </ExamineText>
+            </Monitor>
+            <Monitor Type="Normal" Name="LAT-VEND" ExamineLine="0000001945" ExamineCol="016">
+                <ExamineText>
+                    <![CDATA[          MOVE LAT-VEND               TO WS-LAT-EDIT
+]]>
+                </ExamineText>
+            </Monitor>
+            <Monitor Type="Normal" Name="FS" ExamineLine="0000001924" ExamineCol="014">
+                <ExamineText>
+                    <![CDATA[          IF FS EQUAL ZEROS
+]]>
+                </ExamineText>
+            </Monitor>
+        </MonitorSection>
+        <QueryListSection/>
+    </ProgramData>
+    <ProgramData Name="C:\USERS\WELDER\DOCUMENTS\HBSIS\RELEASE\CADVEND.idy">
+        <BreakpointSection>
+            <Breakpoint Type="Normal" Section="EDITAR" StmtCount="00001" StmtType="022" Every="00001" Enabled="1"/>
+        </BreakpointSection>
+        <MonitorSection>
+            <Monitor Type="Normal" Name="FS" ExamineLine="0000001814" ExamineCol="014">
+                <ExamineText>
+                    <![CDATA[          IF FS NOT = ZEROS
+]]>
+                </ExamineText>
+            </Monitor>
+        </MonitorSection>
+        <QueryListSection/>
+    </ProgramData>
+    <ProgramData Name="C:\USERS\WELDER\DOCUMENTS\HBSIS\RELEASE\CADVEND.idy">
+        <BreakpointSection/>
+        <MonitorSection>
+            <Monitor Type="Normal" Name="FS" ExamineLine="0000001838" ExamineCol="014">
+                <ExamineText>
+                    <![CDATA[          IF FS NOT = ZEROS
+]]>
+                </ExamineText>
+            </Monitor>
+        </MonitorSection>
+        <QueryListSection/>
+    </ProgramData>
+    <ProgramData Name="C:\USERS\WELDER\DOCUMENTS\HBSIS\RELEASE\CADVEND.idy">
+        <BreakpointSection>
+            <Breakpoint Type="Normal" Section="CONFIGURA-SELECAO" StmtCount="00001" StmtType="018" Every="00001" Enabled="1"/>
+            <Breakpoint Type="Normal" Section="CONFIGURA-SELECAO" StmtCount="00001" StmtType="073" Every="00001" Enabled="1"/>
+        </BreakpointSection>
+        <MonitorSection/>
+        <QueryListSection/>
+    </ProgramData>
+    <ProgramData Name="C:\USERS\WELDER\DOCUMENTS\HBSIS\RELEASE\CADVEND.idy">
+        <BreakpointSection/>
+        <MonitorSection>
+            <Monitor Type="Normal" Name="FS" ExamineLine="0000002098" ExamineCol="014">
+                <ExamineText>
+                    <![CDATA[          IF FS NOT = ZEROS
+]]>
+                </ExamineText>
+            </Monitor>
+        </MonitorSection>
+        <QueryListSection/>
+    </ProgramData>
+    <ProgramData Name="C:\USERS\WELDER\DOCUMENTS\HBSIS\RELEASE\CADVEND.idy">
+        <BreakpointSection/>
+        <MonitorSection>
+            <Monitor Type="Normal" Name="WS-COD-VEND" ExamineLine="0000002156" ExamineCol="023">
+                <ExamineText>
+                    <![CDATA[             ADD 1 TO WS-COD-VEND
+
+             READ CSV-FILE
+]]>
+                </ExamineText>
+            </Monitor>
+            <Monitor Type="Normal" Name="FS" ExamineLine="0000002149" ExamineCol="017">
+                <ExamineText>
+                    <![CDATA[             IF FS NOT = ZEROS
+]]>
+                </ExamineText>
+            </Monitor>
+        </MonitorSection>
+        <QueryListSection/>
+    </ProgramData>
+    <ProgramData Name="C:\USERS\WELDER\DOCUMENTS\HBSIS\RELEASE\CADVEND.idy">
+        <BreakpointSection>
+            <Breakpoint Type="Normal" Section="GRAVAR" StmtCount="00001" StmtType="073" Every="00001" Enabled="1"/>
+        </BreakpointSection>
+        <MonitorSection/>
+        <QueryListSection/>
+    </ProgramData>
+    <ProgramData Name="C:\USERS\WELDER\DOCUMENTS\HBSIS\RELEASE\CADCLI.idy">
+        <BreakpointSection>
+            <Breakpoint Type="Normal" Section="IMPORTAR" StmtCount="00001" StmtType="073" Every="00001" Enabled="1"/>
+        </BreakpointSection>
+        <MonitorSection>
+            <Monitor Type="Normal" Name="FS" ExamineLine="0000002080" ExamineCol="014">
+                <ExamineText>
+                    <![CDATA[          IF FS NOT = ZEROS
+]]>
+                </ExamineText>
+            </Monitor>
+        </MonitorSection>
+        <QueryListSection/>
+    </ProgramData>
+</DebugState>

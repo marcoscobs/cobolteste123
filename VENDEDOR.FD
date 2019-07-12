@@ -1,0 +1,8 @@
+        FD VENDEDOR.
+        01 REG-VEND.    
+            02 XAV-VEND.   
+                03 COD-VEND              PIC 9(03).
+            02 CPF-VEND                  PIC 9(11).
+            02 NOME-VEND                 PIC X(40).
+            02 LAT-VEND                  PIC S9(03)V9(08).
+            02 LONG-VEND                 PIC S9(03)V9(08).

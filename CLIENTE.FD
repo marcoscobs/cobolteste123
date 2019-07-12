@@ -1,0 +1,8 @@
+        FD CLIENTE.
+        01 REG-CLI.
+            02 XAV-CLI.
+                03 COD-CLI               PIC 9(07).
+            02 CNPJ-CLI                  PIC 9(14).
+            02 RAZAO-CLI                 PIC X(40).
+            02 LAT-CLI                   PIC S9(03)V9(08).
+            02 LONG-CLI                  PIC S9(03)V9(08).

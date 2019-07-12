@@ -1,0 +1,61 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO              PIC 9(8) COMP-5
+                                             VALUE 141.
+
+       01 VERSION-NO                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO                       PIC 9(4) COMP-5
+                                             VALUE 221.
+
+       01 DATA-BLOCK.
+          03 OBS-D                           PIC X(100).
+          03 EXIT-FLAG                       PIC 9.
+             88 EXIT-FLAG-TRUE               VALUE 1.
+          03 CONFIG-FLAG                     PIC x(4) COMP-5.
+          03 CONFIG-VALUE                    PIC x(4) COMP-5.
+          03 CAMPO-ERRO                      PIC X(150).
+          03 ERRO-LER-D                      PIC X(3).
+          03 OPERACAO                        PIC X(30).
+          03 MENSAGEM-D                      PIC X(100).
+          03 RESULT-D                        PIC X(150).
+          03 TITULO-D                        PIC X(100).
+      * flags
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 FIELD-NUMBERS.
+          03 FLD-NO-OBS-D                    PIC 9(4) COMP-5 VALUE
+                                               1.
+          03 FLD-NO-EXIT-FLAG                PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 FLD-NO-CONFIG-FLAG              PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 FLD-NO-CONFIG-VALUE             PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 FLD-NO-CAMPO-ERRO               PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 FLD-NO-ERRO-LER-D               PIC 9(4) COMP-5 VALUE
+                                               6.
+          03 FLD-NO-OPERACAO                 PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 FLD-NO-MENSAGEM-D               PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 FLD-NO-RESULT-D                 PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 FLD-NO-TITULO-D                 PIC 9(4) COMP-5 VALUE
+                                               10.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************

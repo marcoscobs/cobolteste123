@@ -1,0 +1,425 @@
+      *> C:\Users\Welder\Documents\hbsis\owndrawlistview.ins
+      $SET ALIGN(8)
+       78  numberOfStandardOutputs      value 20.
+       78  numberOfStandardSockets      value 5.
+       78  numberOfStandardDependants   value 5.
+       78  numberOfStandardSpies        value 1.
+       78  numberOfSocketSignals        value 20.
+       78  numberOfHandlersForSignal    value 5.
+       78  traceRecordTooLong           value 101.
+       78  inputSocketUndefined         value 93.
+       78  outputSocketUninitialized    value 94.
+       78  outputSignalUndefined        value 95.
+       78  duplicateOutputSignal        value 96.
+       78  internalError                value 97.
+       78  duplicateInputSignal         value 98.
+       78  resourceNotFound             value 99.
+       78  resourceFileError            value 100.
+      *>>---------------------------------------------------------------
+      *>> The maximum size in bytes of an OBJECT.  Limit is 256Meg.
+      *>>---------------------------------------------------------------
+       78 maxnumberbytes               value h"0FFFFFFF".
+      *>>---------------------------------------------------------------
+      *>> The size of an object reference
+      *>>---------------------------------------------------------------
+       78 objectReferenceSize          value length of self.
+      *>----------------------------------------------------------------
+      *> Answer true if the receiver is a kind of menu, else answer
+      *> false.
+      *>----------------------------------------------------------------
+      *>----------------------------------------------------------------
+      *> Add a dependent for this object. The dependent will be notified
+      *> if this object receives the changed or deleted message.
+      *>----------------------------------------------------------------
+       78  HH-DISPLAY-TOPIC  value h"0000".
+       78  HH-HELP-FINDER    value h"0000".
+       78  HH-DISPLAY-TOC    value h"0001".
+       78  HH-DISPLAY-INDEX  value h"0002".
+       78  HH-DISPLAY-SEARCH value h"0003".
+       78  HH-SET-WIN-TYPE   value h"0004".
+       78  HH-GET-WIN-TYPE   value h"0005".
+       78  HH-GET-WIN-HANDLE value h"0006".
+       78  HH-ENUM-INFO-TYPE value h"0007".
+       78  HH-SET-INFO-TYPE  value h"0008".
+       78  HH-SYNC           value h"0009".
+       78  HH-RESERVED1      value h"000a".
+       78  HH-RESERVED2      value h"000b".
+       78  HH-RESERVED3      value h"000c".
+       78  HH-KEYWORD-LOOKUP value h"000d".
+       78  HH-DISPLAY-TEXT-POPUP              value h"000e".
+       78  HH-HELP-CONTEXT   value h"000f".
+       78  HH-TP-HELP-CONTEXTMENU             value h"0010".
+       78  HH-TP-HELP-WM-HELP                 value h"0011".
+       78  HH-CLOSE-ALL                       value h"0012".
+       78  HH-ALINK-LOOKUP                    value h"0013".
+       78  HH-GET-LAST-ERROR                  value h"0014".
+       78  HH-ENUM-CATEGORY                   value h"0015".
+       78  HH-ENUM-CATEGORY-IT                value h"0016".
+       78  HH-RESET-IT-FILTER                 value h"0017".
+       78  HH-SET-INCLUSIVE-FILTER            value h"0018".
+       78  HH-SET-EXCLUSIVE-FILTER            value h"0019".
+       78  HH-INITIALIZE                      value h"001c".
+       78  HH-UNINITIALIZE                    value h"001d".
+       78  HH-PRETRANSLATEMESSAGE             value h"00fd".
+       78  HH-SET-GLOBAL-PROPERTY             value h"00fc".
+       01 helpFile                 usage object reference.
+       01 filler.
+           03 contextId                pic x(4) comp-5.
+           03 osStackCounter           pic x(4) comp-5.
+       01 Panels2Flags pic x comp-5.
+           88 isPanels2Object      value 1.
+           88 isNotPanels2Object   value 0.
+       01 propertyDict             usage object reference.
+       01 resourceObject           usage object reference.
+       01 osPropertyList           usage object reference.
+       78 NextAvailEvent value 67.
+       78 p2ce-destroyed value 66.
+       78 p2ce-Created value 65.
+       78 p2ce-update value 64.
+       78 p2ce-beginDrag    value 63.
+       78 p2ce-BeginEditItem value 61.
+       78 p2ce-EndEditItem value 62.
+       78 p2ce-button3ClkOnItem value 60.
+       78 p2ce-SelectionChanged value 25.
+       78 p2ce-help     value 26.
+       78 p2ce-noevent value 0.
+      *> Window events sent to the window object
+        *>> 1 - 9 has to be reserved for message box return values
+        *>> for compatability with pan2link.cpy
+       78 p2ce-move value 51.
+       78 moved value 51.
+       78 p2ce-resize value 52.
+       78 resized value 52.
+       78 p2ce-close value 53.
+       78 closed value 53.
+       78 p2ce-activate value 54.
+       78 activated value 54.
+       78 p2ce-deactivate value 55.
+       78 deactivated value 55.
+      *> General gadget events sent to the gadget object
+       78 p2ce-gainfocus value 56.
+       78 gained-focus value 56.
+       78 p2ce-losefocus value 57.
+       78 lost-focus value 57.
+       78 p2ce-accept value 58.
+       78 accepted value 58.
+      *> Menu event sent to the window object
+       78 p2ce-menuselect value 59.
+       78 menuSelected value 59.
+      *> Scroll Bar events sent to the scrollbar object
+       78 p2ce-lineup value 10.
+       78 lineUp value 10.
+       78 p2ce-linedown value 11.
+       78 lineDown value 11.
+       78 p2ce-pageup value   12.
+       78 pageUp value 12.
+       78 p2ce-pagedown value 13.
+       78 pageDown value 13.
+       78 p2ce-verttrack value 14.
+       78 verticalTrack value 14.
+       78 p2ce-vertposition value 15.
+       78 verticalPosition value 15.
+       78 p2ce-vertend value 16.
+       78 verticalEnd value 16.
+       78 p2ce-lineleft value 17.
+       78 lineLeft value 17.
+       78 p2ce-lineright value 18.
+       78 lineRight value 18.
+       78 p2ce-pageleft value 19.
+       78 pageLeft value 19.
+       78 p2ce-pageright value 20.
+       78 pageRight value 20.
+       78 p2ce-horiztrack value 21.
+       78 horizontalTrack value 21.
+       78 p2ce-horizposition value 22.
+       78 horizontalPosition value 22.
+       78 p2ce-horizend value 23.
+       78 horizontalEnd value 23.
+      *> Button events sent to the to the button object
+       78 p2ce-clicked value 24.
+       78 clicked value 24.
+      *> List Box events sent to the List Box object
+       78 p2ce-select value 27.
+      *> Mouse Events sent to the object under the mouse
+       78 p2ce-mousemoved    value 28.
+       78 mouseMoved         value 28.
+       78 p2ce-button1down   value 29.
+       78 button1Down        value 29.
+       78 p2ce-button1up     value 30.
+       78 button1Up          value 30.
+       78 p2ce-button1dblclk value 31.
+       78 p2ce-button2down   value 32.
+       78 p2ce-button2up     value 33.
+       78 p2ce-button2dblclk value 34.
+       78 p2ce-button3down   value 35.
+       78 button3Down        value 35.
+       78 p2ce-button3up     value 36.
+       78 button3Up          value 36.
+       78 p2ce-button3dblclk value 37.
+       78 button3dblclk      value 37.
+      *>> Keyboard events sent to a window or gadget object with focus
+       78 p2ce-dataKey         value 38.
+       78 p2ce-functionkey     value 39.
+       78 p2ce-systemkey       value 40.
+       78 p2ce-command         value 42.
+       78 p2ce-valueChanged    value 43.
+       78 p2ce-itemResized     value 44.
+       78 p2ce-itemResizing    value 45.
+       78 selectionChanging        value 46.
+       78 p2ce-selectionChanging   value 46.
+       78 Itemcollapsed            value 47.
+       78 p2ce-itemCollapsed       value 47.
+       78 ItemExpanded             value 48.
+       78 p2ce-itemExpanded        value 48.
+       78 ItemExpanding           value 49.
+       78 p2ce-ItemExpanding      value 49.
+       78 ItemCollapsing          value 41.
+       78 p2ce-ItemCollapsing     value 41.
+       78 getContents          value 50.
+      *> Events returned from message boxes
+       78 mb-return-ok          value 1.
+       78 mb-return-cancel      value 2.
+       78 mb-return-abort       value 3.
+       78 mb-return-retry       value 4.
+       78 mb-return-ignore      value 5.
+       78 mb-return-yes         value 6.
+       78 mb-return-no          value 7.
+       78 mb-return-help        value 8.
+       78 mb-return-enter       value 9.
+       78 p2ce-FilesDropped             value 50.
+       *> keystates
+       78 p2ce-ctrl            value 262144.
+       78 p2ce-left-shift      value 131072.
+       78 p2ce-right-shift     value 65536.
+       78 p2ce-alt             value 524288.
+       78 p2ce-ins-lock        value 8.
+       78 p2ce-caps-lock       value 4.
+       78 p2ce-num-lock        value 2.
+       78 p2ce-scroll-lock     value 1.
+           *> Values returned from getminmaxstate for sizing event
+       78  Normal              value 0.
+       78  Maximized           value 1.
+       78  Minimized           value 2.
+       78 IDC-OK               value 1.
+       78 IDC-CANCEL           value 2.
+      *>>---------------------------------------------------------------
+      *>> The parent for this object.
+      *>>---------------------------------------------------------------
+       01 ancestor                  usage object reference value null.
+      *>>---------------------------------------------------------------
+      *>> A dictionary storing the link between events and callbacks
+      *>>---------------------------------------------------------------
+       01 eventhandlers           usage object reference value null.
+      *>>---------------------------------------------------------------
+      *>> A dictionary storing the link between events and what they
+      *>> should be translated to
+      *>>---------------------------------------------------------------
+       01 translatehandlers       usage object reference value null.
+      *>>---------------------------------------------------------------
+      *>> A generic label used to store string information for most
+      *>> panels classes.
+      *>>---------------------------------------------------------------
+       01 alabel                  usage object reference value null.
+      *>>---------------------------------------------------------------
+      *>> A generic flags used to determine attributes of this object
+      *>>---------------------------------------------------------------
+       01 object-flags     pic x(8) comp-5.
+       01 windowObjectFlags redefines object-flags.
+           03 dwStyle      pic x(4) comp-5.
+           03 dwExStyle    pic x(4) comp-5.
+      *>>---------------------------------------------------------------
+      *>> A flag to indicate whether the panels representation exists
+      *>> or not.
+      *>>---------------------------------------------------------------
+       01 GuiBaseFlags.
+          03 CreatedFlag      pic x comp-5 value 0.
+               88 isCreated    value 1.
+               88 notCreated   value 0.
+          03 ProxyFlag      pic x comp-5 value 0.
+               88 isProxy    value 1.
+               88 notProxy   value 0.
+          03 Panels2CompatibilityFlag pic x comp-5 value 0.
+               88 isCompatible    value 1.
+               88 isNotCompatible value 0.
+          03 destroyFlag pic x comp-5 value 0.
+               88 destroy      value 0.
+               88 dontdestroy  value 1.
+          03 CacheParentStatus                  pic x comp-5.
+               88 DoNotCacheParent       value 0.
+               88 CacheParent            value 1.
+          03 CreatedFromHandleStatus           pic x comp-5.
+               88 CreatedFromhandle      value 1.
+               88 NotCreatedFromHandle   value 0.
+          03 ExternalRectStatus                pic x comp-5.
+               88 useExternalRect    value 0.
+               88 useInternalRect    value 1.
+      *>>---------------------------------------------------------------
+      *>> Panels Id for this object.
+      *>>---------------------------------------------------------------
+       01 p2-id            pic x(4) comp-5 value 0.
+       01 p2-idAsHWND      pointer redefines p2-id.
+      *>----------------------------------------------------------------
+      *> Return a collection of event ids that this instance
+      *> supports. This is the total list of normal and system events.
+      *>#See method "getSupportedEvents".
+      *>#See method "getSupportedSystemEvents".
+      *>----------------------------------------------------------------
+       *>> Generic flags for all windows used in object-flags
+             78 pfl-titlebar             value h"00000001".
+             78 pfl-sysmenu              value h"00000002".
+             78 pfl-keyboard-group       value h"00000004".
+             78 pfl-sizeborder           value h"00000008".
+             78 pfl-minbutton            value h"00000010".
+             78 pfl-maxbutton            value h"00000020".
+             78 pfl-minmax               value h"00000030".
+             78 pfl-vertscroll           value h"00000040".
+             78 pfl-horzscroll           value h"00000080".
+             78 pfl-double-border        value h"00000100".
+             78 pfl-border               value h"00000200".
+             78 pfl-borderMask           value h"00000308".
+             78 pfl-group-start          value h"00000400".
+             78 pfl-not-clipped          value h"00000800".
+             78 pfl-disabled             value h"00001000".
+             78 pfl-visible              value h"00002000".
+             78 pfl-minimized            value h"00004000".
+             78 pfl-maximized            value h"00008000".
+       78 78-AlignTop        value 1.
+       78 78-AlignBottom     value 2.
+       78 78-AlignLeft       value 3.
+       78 78-AlignRight      value 4.
+       78 78-Undocked        value 5.
+       78 fs-show        value 1.
+       78 fs-hide        value 2.
+       78 fs-activate    value 8.
+       78 fs-deactivate  value 8.
+       78 fs-enable      value 16.
+       78 fs-disable     value 32.
+       78 fs-syncactive  value 64.
+       01 filler             pic x(4) comp-5.
+       01 alignment          pic x comp-5.
+           88 alignTop       value 1.
+           88 alignBottom    value 2.
+           88 alignLeft      value 3.
+           88 alignRight     value 4.
+       01 dockingFlags.
+           03 dockingStatus     pic x comp-5.
+               88 dockedTop       value 1.
+               88 dockedBottom    value 2.
+               88 dockedLeft      value 3.
+               88 dockedRight     value 4.
+               88 floating        value 5. *>> Is in a floating window
+           03 PrevDockingStatus     pic x comp-5.
+       01 oldProcPtr           procedure-pointer.
+       01 filler.
+                03 helpMode             pic x(4) comp-5.
+                03 dlgCode              pic x(4) comp-5.
+       01 tooltipWindow        usage object reference.
+       01 isOLEControl         usage object reference.
+       01 modalChildren        pic x(4) comp-5.
+       01 OCXObject            usage object reference.
+       01 object-cursor        usage object reference.
+       01 theFont              usage object reference.
+       01 windowByteFlags.
+           03 OLEViewFlag pic x comp-5.
+           03 baseLinePositioned     pic x comp-5.
+               88 isBaseLinePositioned     value 1.
+           03 eraseBackgroundFlag        pic x comp-5.
+               88 eraseBackground          value 0.
+           03 coordSystem            pic x comp-5.
+               88 nativeCoords                     value 0.
+               88 autoCoords                       value 1.
+               88 genericCoords                    value 2.
+               88 Panels2GenericCoords             value 3.
+           03 cursorVisibility       pic x comp-5.
+               88  cursorHidden        value 1.
+               88  cursorVisible       value 0.
+           03 fitText                pic x comp-5.
+               88  isFitText           value 1.
+               88  isNotFitText        value 0.
+           03 containerFlag          pic x comp-5.
+               88 isContainer      value 1.
+               88 isNotContainer   value 0.
+           03 childInheritCursorStatus          pic x comp-5.
+               88 childInheritCursor      value 0.
+               88 childNotInheritCursor   value 1.
+           03 accessSystemEventsStatus          pic x comp-5.
+               88 NotaccessSystemEvents      value 0.
+               88 accessSystemEvents         value 1.
+           03 AcceptdragDropFilesStatus      pic x comp-5.
+               88 NotAcceptFiles                   value 0.
+               88 AcceptDragDropFiles              value 1.
+           03 ProcessDialogMessagesStatus      pic x comp-5 value 1.
+               88 NotProcessDialogMessages           value 0.
+               88 ProcessDialogMessages              value 1.
+           03 transparentStatus               pic x comp-5.
+                88 isTransparent        value 1.
+                88 isNotTransparent     value 0.
+           03 helpActive                pic x comp-5.
+           03 dockable                  pic x comp-5.
+           03 DataKeyEventStatus        pic x comp-5.
+               88 SendDataKeyEvent        value 0.
+           03 externalRect              pic x comp-5.
+       01 osfloatingWindow          usage object reference.
+       01 filler.
+                03 windowIcon       usage object reference.
+                03 characterExtra   pic s9(9) comp-5.
+       01 foregroundColor       usage object reference.
+       01 background.
+                03 backgroundColor       usage object reference.
+                03 backgroundBrush       pic x(4) comp-5.
+       01 popups                usage object reference.
+       01 ScaleX                pic s9(9) comp-5.
+       01 ScaleY                pic s9(9) comp-5.
+       01 p2-x                  pic s9(9) comp-5.
+       01 p2-y                  pic s9(9) comp-5.
+       01 p2-width              pic s9(9) comp-5.
+       01 p2-height             pic s9(9) comp-5.
+      *>>---------------------------------------------------------------
+      *>> A collection of objects that are the descendants of this
+      *>> parent.
+      *>>---------------------------------------------------------------
+       01 children         usage object reference.
+       01 nextid           pic x(4) comp-5.
+       01 atextcursor      usage object reference.
+       01 hScroll          usage object reference.
+       01 vScroll          usage object reference.
+       01 theMenuBar       usage object reference.
+       01 filler.
+            03 accelTable       usage object reference.
+            03 osCachedFocus    usage object reference.
+       01 SplitBarSide   pic x comp-5.
+          88 NoSplitBar    Value 0.
+          88 SplitTop      Value 1.
+          88 SplitLeft     Value 2.
+          88 SplitRight    Value 4.
+          88 SplitBottom   Value 8.
+       01 filler.
+           03 splitBarRubberBand          object reference.
+           03 osOldIMC                    pic x(4) comp-5.
+      *>----------------------------------------------------------------
+      *> Makes this object insensitive to mouse and keyboard events.
+      *> Some controls change in appearance when disabled.
+      *>#See method "enable".
+      *>----------------------------------------------------------------
+       01 gadget-id             pic x(4) comp-5.
+      *>----------------------------------------------------------------
+      *> Overrides width and height of the button, creating a button
+      *> that accomodates the specified text using the system font
+      *> for buttons.
+      *>----------------------------------------------------------------
+       01 editStatus    pic x(4) comp-5.
+                88 isEditing value 1.
+                88 isNotEditing value 0.
+       01 editClass             usage object reference.
+       01 columns               usage object reference.
+       01 normalImages          usage object reference.
+       01 smallImages           usage object reference.
+       01 items                 usage object reference.
+       01 columnToBeSortedOn    pic x(4) comp-5.
+       01 fullrowselect         pic x comp-5.
+      *>---------------------------------------------------
+      *> Takes a list of images which is a list of all the
+      *> small images used by this list view.
+      *>---------------------------------------------------
+       01  font-size               PIC 9(9) COMP-5 value 0.
+      *> OCWIZARD - start standard instance methods

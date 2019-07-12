@@ -1,0 +1,10 @@
+
+                SELECT VENDEDOR ASSIGN TO "VENDEDOR"
+                ORGANIZATION   IS  INDEXED
+                ACCESS MODE    IS  DYNAMIC  
+                RECORD KEY     IS  XAV-VEND   
+                FILE STATUS    IS  FS
+                ALTERNATE RECORD KEY IS CPF-VEND
+                LOCK MODE IS MANUAL WITH LOCK ON RECORD.
+
+

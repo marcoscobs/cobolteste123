@@ -1,0 +1,198 @@
+
+      *****************************************************************
+      *   Data Block
+      *****************************************************************
+
+       01 DATA-BLOCK-VERSION-NO-LV              PIC 9(8) COMP-5
+                                             VALUE 4.
+
+       01 VERSION-NO-LV                         PIC 9(2) COMP-5 VALUE
+                                               2.
+
+       01 SET-BUILD-NO-LV                       PIC 9(4) COMP-5
+                                             VALUE 12.
+
+
+       01 DATA-BLOCK-LV.
+      * This group maps to n columns and defines one row
+          03 LVIEW-ITEM.
+             04 LVIEW-ITEM-ITEM              OCCURS 30.
+                05 LVITEM-TEXT               PIC X(60).
+                05 LVITEM-LENGTH             PIC x(4) COMP-5.
+                05 LVITEM-DIR                PIC 9.
+                   88 LVITEM-DIR-TRUE        VALUE 1.
+                05 LVITEM-OBJECT OBJECT REFERENCE.
+      *
+      * This group maps to nnn rows and contains row dat
+          03 LVIEW-DATA.
+             04 LVIEW-DATA-ITEM              OCCURS 999.
+                05 LVDATA-ICON               PIC X.
+                05 LVDATA-OBJECT OBJECT REFERENCE.
+                05 LVDATA-COLUMN1            PIC X(60).
+                05 LVDATA-COLUMN2            PIC X(60).
+                05 LVDATA-COLUMN3            PIC X(60).
+                05 LVDATA-COLUMN4            PIC X(60).
+                05 LVDATA-COLUMN5            PIC X(60).
+                05 LVDATA-COLUMN6            PIC X(60).
+                05 LVDATA-COLUMN7            PIC X(60).
+                05 LVDATA-COLUMN8            PIC X(60).
+                05 LVDATA-COLUMN9            PIC X(60).
+                05 LVDATA-COLUMN10           PIC X(60).
+                05 LVDATA-COLUMN11           PIC X(60).
+                05 LVDATA-COLUMN12           PIC X(60).
+                05 LVDATA-COLUMN13           PIC X(60).
+                05 LVDATA-COLUMN14           PIC X(60).
+                05 LVDATA-COLUMN15           PIC X(60).
+                05 LVDATA-COLUMN16           PIC X(60).
+                05 LVDATA-COLUMN17           PIC X(60).
+                05 LVDATA-COLUMN18           PIC X(60).
+                05 LVDATA-COLUMN19           PIC X(60).
+                05 LVDATA-COLUMN20           PIC X(60).
+                05 LVDATA-COLUMN21           PIC X(60).
+                05 LVDATA-COLUMN22           PIC X(60).
+                05 LVDATA-COLUMN23           PIC X(60).
+                05 LVDATA-COLUMN24           PIC X(60).
+                05 LVDATA-COLUMN25           PIC X(60).
+                05 LVDATA-COLUMN26           PIC X(60).
+                05 LVDATA-COLUMN27           PIC X(60).
+                05 LVDATA-COLUMN28           PIC X(60).
+                05 LVDATA-COLUMN29           PIC X(60).
+                05 LVDATA-COLUMN30           PIC X(60).
+          03 LVDATA-MAX                      PIC x(2) COMP-X.
+          03 LVDRAG-IN-PROGRESS              PIC x COMP-X.
+          03 CHECK-BOX                       PIC 9.
+          03 LISTA-ZEBRADA                   PIC 9.
+             88 CHECK-BOX-TRUE               VALUE 1.
+          03 USAR-REDRAWING                  PIC X.
+          03 LISTV-01-OBJREF OBJECT REFERENCE.
+          03 OBJETO-EDINVERT-AUX OBJECT REFERENCE.
+      *
+          03 FUNCTION-DATA.
+             05 WINDOW-HANDLE                PIC x(4) COMP-5.
+             05 OBJECT-REFERENCE OBJECT REFERENCE.
+             05 CALL-FUNCTION                PIC X(30).
+             05 NUMERIC-VALUE                PIC x(4) COMP-5.
+             05 NUMERIC-VALUE2               PIC x(4) COMP-5.
+             05 SIZE-WIDTH                   PIC x(4) COMP-5.
+             05 SIZE-HEIGHT                  PIC x(4) COMP-5.
+             05 POSITION-X                   PIC x(4) COMP-5.
+             05 POSITION-Y                   PIC x(4) COMP-5.
+             05 IO-TEXT-BUFFER               PIC X(256).
+             05 IO-TEXT-BUFFER2              PIC X(256).
+      *****************
+
+      *****************************************************************
+      *   End of Data Block
+      *****************************************************************
+
+      *****************************************************************
+      *   Field Numbers
+      *****************************************************************
+
+       01 FIELD-NUMBERS.
+          03 FLD-NO-LVITEM-TEXT              PIC 9(4) COMP-5 VALUE
+                                               2.
+          03 FLD-NO-LVITEM-LENGTH            PIC 9(4) COMP-5 VALUE
+                                               3.
+          03 FLD-NO-LVITEM-DIR               PIC 9(4) COMP-5 VALUE
+                                               4.
+          03 FLD-NO-LVITEM-OBJECT            PIC 9(4) COMP-5 VALUE
+                                               5.
+          03 FLD-NO-LVDATA-ICON              PIC 9(4) COMP-5 VALUE
+                                               7.
+          03 FLD-NO-LVDATA-OBJECT            PIC 9(4) COMP-5 VALUE
+                                               8.
+          03 FLD-NO-LVDATA-COLUMN1           PIC 9(4) COMP-5 VALUE
+                                               9.
+          03 FLD-NO-LVDATA-COLUMN2           PIC 9(4) COMP-5 VALUE
+                                               10.
+          03 FLD-NO-LVDATA-COLUMN3           PIC 9(4) COMP-5 VALUE
+                                               11.
+          03 FLD-NO-LVDATA-COLUMN4           PIC 9(4) COMP-5 VALUE
+                                               12.
+          03 FLD-NO-LVDATA-COLUMN5           PIC 9(4) COMP-5 VALUE
+                                               13.
+          03 FLD-NO-LVDATA-COLUMN6           PIC 9(4) COMP-5 VALUE
+                                               14.
+          03 FLD-NO-LVDATA-COLUMN7           PIC 9(4) COMP-5 VALUE
+                                               15.
+          03 FLD-NO-LVDATA-COLUMN8           PIC 9(4) COMP-5 VALUE
+                                               16.
+          03 FLD-NO-LVDATA-COLUMN9           PIC 9(4) COMP-5 VALUE
+                                               17.
+          03 FLD-NO-LVDATA-COLUMN10          PIC 9(4) COMP-5 VALUE
+                                               18.
+          03 FLD-NO-LVDATA-COLUMN11          PIC 9(4) COMP-5 VALUE
+                                               19.
+          03 FLD-NO-LVDATA-COLUMN12          PIC 9(4) COMP-5 VALUE
+                                               20.
+          03 FLD-NO-LVDATA-COLUMN13          PIC 9(4) COMP-5 VALUE
+                                               21.
+          03 FLD-NO-LVDATA-COLUMN14          PIC 9(4) COMP-5 VALUE
+                                               22.
+          03 FLD-NO-LVDATA-COLUMN15          PIC 9(4) COMP-5 VALUE
+                                               23.
+          03 FLD-NO-LVDATA-COLUMN16          PIC 9(4) COMP-5 VALUE
+                                               24.
+          03 FLD-NO-LVDATA-COLUMN17          PIC 9(4) COMP-5 VALUE
+                                               25.
+          03 FLD-NO-LVDATA-COLUMN18          PIC 9(4) COMP-5 VALUE
+                                               26.
+          03 FLD-NO-LVDATA-COLUMN19          PIC 9(4) COMP-5 VALUE
+                                               27.
+          03 FLD-NO-LVDATA-COLUMN20          PIC 9(4) COMP-5 VALUE
+                                               28.
+          03 FLD-NO-LVDATA-COLUMN21          PIC 9(4) COMP-5 VALUE
+                                               29.
+          03 FLD-NO-LVDATA-COLUMN22          PIC 9(4) COMP-5 VALUE
+                                               30.
+          03 FLD-NO-LVDATA-COLUMN23          PIC 9(4) COMP-5 VALUE
+                                               31.
+          03 FLD-NO-LVDATA-COLUMN24          PIC 9(4) COMP-5 VALUE
+                                               32.
+          03 FLD-NO-LVDATA-COLUMN25          PIC 9(4) COMP-5 VALUE
+                                               33.
+          03 FLD-NO-LVDATA-COLUMN26          PIC 9(4) COMP-5 VALUE
+                                               34.
+          03 FLD-NO-LVDATA-COLUMN27          PIC 9(4) COMP-5 VALUE
+                                               35.
+          03 FLD-NO-LVDATA-COLUMN28          PIC 9(4) COMP-5 VALUE
+                                               36.
+          03 FLD-NO-LVDATA-COLUMN29          PIC 9(4) COMP-5 VALUE
+                                               37.
+          03 FLD-NO-LVDATA-COLUMN30          PIC 9(4) COMP-5 VALUE
+                                               38.
+          03 FLD-NO-LVDATA-MAX               PIC 9(4) COMP-5 VALUE
+                                               39.
+          03 FLD-NO-LVDRAG-IN-PROGRESS       PIC 9(4) COMP-5 VALUE
+                                               40.
+          03 FLD-NO-CHECK-BOX                PIC 9(4) COMP-5 VALUE
+                                               41.
+          03 FLD-NO-LISTV-01-OBJREF          PIC 9(4) COMP-5 VALUE
+                                               42.
+          03 FLD-NO-WINDOW-HANDLE            PIC 9(4) COMP-5 VALUE
+                                               44.
+          03 FLD-NO-OBJECT-REFERENCE         PIC 9(4) COMP-5 VALUE
+                                               45.
+          03 FLD-NO-CALL-FUNCTION            PIC 9(4) COMP-5 VALUE
+                                               46.
+          03 FLD-NO-NUMERIC-VALUE            PIC 9(4) COMP-5 VALUE
+                                               47.
+          03 FLD-NO-NUMERIC-VALUE2           PIC 9(4) COMP-5 VALUE
+                                               48.
+          03 FLD-NO-SIZE-WIDTH               PIC 9(4) COMP-5 VALUE
+                                               49.
+          03 FLD-NO-SIZE-HEIGHT              PIC 9(4) COMP-5 VALUE
+                                               50.
+          03 FLD-NO-POSITION-X               PIC 9(4) COMP-5 VALUE
+                                               51.
+          03 FLD-NO-POSITION-Y               PIC 9(4) COMP-5 VALUE
+                                               52.
+          03 FLD-NO-IO-TEXT-BUFFER           PIC 9(4) COMP-5 VALUE
+                                               53.
+          03 FLD-NO-IO-TEXT-BUFFER2          PIC 9(4) COMP-5 VALUE
+                                               54.
+
+      *****************************************************************
+      *   End of Field Numbers
+      *****************************************************************
